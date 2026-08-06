@@ -70,6 +70,48 @@ def procurar_nome():
     print(f'Seu nome tem Silva? {'silva' in nome.lower()}')
     # in não é um método é um operador
 
+def gerar_iniciais(nome_paciente):
+
+    palavras = nome_paciente.split()
+    #não posso colocar o .title dps de .split pq o title funciona para colocar todas as letras maiusculas da string, se eu dou split antes, nao existe mais uma frase.
+    print(palavras) 
+    conectivos = ["da", "de", "do", "das", "dos", "e"]
+    iniciais = "" #variavel com caixa de texto vazia
+
+    for palavra in palavras:
+        if palavra.lower() not in conectivos:
+            iniciais += palavra[0].upper() + "." 
+            # o operador de atribuição cumulativa += serve para ir colando o texto novo no texto ja guardado (seria -> iniciais = iniciais + palavra[0].upper() + ".")
+            # na primeira volta do for ('carlos'), pega a primeira letra deixa maiuscula e coloca na frente o ponto "C." 
+            # Na segunda volta, pega a primeira letra da segunda palavra 
+    return iniciais 
+   
+
+    nome = ('   carlos eduardo da silva   ')
+    resultado = gerar_iniciais(nome)
+    print(resultado)
+
+    """ 
+    Objetivo: Praticar o uso correto de return e o tratamento de strings imutáveis.
+    O Desafio:
+    Crie uma função chamada gerar_iniciais que receba o nome completo de um paciente (mesmo com espaços extras nas pontas ou letras em caixa alta/baixa) 
+    e retorne apenas as iniciais das palavras em maiúsculo, ignorando conectivos (da, de, do, das, dos, e).
+    Entrada esperada: '   carlos eduardo da silva   '
+    Saída esperada da função: 'C.E.S.'
+    Dica: Lembre-se de usar .strip(), .split() e garantir que sua função use a palavra return no final!
+    """
+
+    """
+    palavra = 'carlos'
+    # print("A palavra inteira é:", palavra)
+    # print("A primeira letra é:", palavra[0])
+    # print("A primeira letra maiúscula é:", palavra[0].upper())
+    # print("A primeira letra com ponto fica:", palavra[0].upper() + ".")
+    """
+# =======================================================================================================================================
+
+
+
 
 manipulacao_print()
 #manipulacao_de_nome()
