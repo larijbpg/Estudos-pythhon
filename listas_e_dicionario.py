@@ -1,3 +1,19 @@
+"""
+Destrinchando dicionários:
+O dicionario funciona como 'chave' = 'valor' ('gaveta': 'dentro da gaveta')
+
+Para memorizar a ordem:
+dicionario[nome da chave/quem eu quero identificar(sintoma, gene, ID)] = valor (oq quero guardar la dentro)
+dicionario = {"febre": 3, "tosse": 2}
+
+dicionario[sintoma] significa = "Acesse a gaveta do dicionario que tem o nome sintoma"
+
+O python usa [] para acessar o que tem dentro do dicionario/lista
+    Na lista acessa pela posição -> print(lista[0]) -> o primeiro item da lista
+    No dicionário acessa pelo nome da chave 
+        dicionario = {"febre": 3, "tosse": 2}
+        print(dicionario["febre"])  # Pega o valor guardado na chave "febre" -> 3
+"""
 
 def lista_de_amostras():
     amostras = [
@@ -7,8 +23,8 @@ def lista_de_amostras():
         {'nome': 'Luna', 'data': '2026-08-03', 'resultado': 'positivo'}
     ]
     for amostra in amostras:
-        if amostra['resultado'] == 'positivo':
-            print(amostra['nome'])
+        if amostra['resultado'] == 'positivo': #se no dicionario(chamado de amostra) tiver a chave 'resultado' com o valor igual a positivo
+            print(amostra['nome']) # mostre desses dicionarios positivos o valor da chave 'nome'
 
 
 def lista_de_numeros():
